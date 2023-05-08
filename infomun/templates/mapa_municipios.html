@@ -1,0 +1,16 @@
+{% load static %}
+
+<div class="card border-0">
+    <div class="card-header rounded-0 text-white text-left pt-2 pb-0 background-principal">
+        {% include 'selector_municipios.html' %}
+    </div>
+    <div class="card-body pb-0">
+        <div class="col-sm-12">
+            <div id="mapa_municipios"  style="width: 100%; height: 400px; float:left"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    {% include 'mapa_municipios.js' %}
+</script>

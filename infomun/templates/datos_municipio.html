@@ -1,0 +1,51 @@
+{% load static %}
+
+<div class="card border-0">
+    <div class="card-header rounded-0 text-white text-left pt-2 pb-0 background-principal">
+        <h4>Información básica</h4>
+    </div>
+    <div class="card-body pb-0">
+        <div class="col-sm-12">
+            <table class="table tbl_info_basica">
+                <tbody>
+                    <tr>
+                        <td>Nombre oficial</td>
+                        <td>{{ municipio.nom_mun_largo}}</td>
+                    </tr>
+                    <tr>
+                        <td>Presidente municipal</td>
+                        <td>{{ municipio.presidente}}</td>
+                    </tr>
+                    <tr>
+                        <td>Población</td>
+                        <td>{{municipio.poblacion}} hab. <sup>(1)</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Localidades</td>
+                        <td>{{municipio.localidades}} <sup>(2)</sup></td>
+                    </tr>
+                    <tr>
+                        <td>Superficie</td>
+                        <td>{{municipio.superficie}} km<sup>2</sup> <sup>(3)</sup></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        {% if municipio.escudo %}
+            <div class="col-sm-12 text-center escudo_municipal">
+                <img class="escudo_municipal" src="{{ municipio.escudo_url }}">
+            </div>
+        {% else %}
+            <div class="col-sm-12 pb-5">
+            </div>
+        {% endif %}
+        <div class="col-sm-12">
+            <h6><strong>Fuente:</strong></h6>
+            <ul class="small">
+                <li>(1) INEGI. Censo de Población y Vivienda 2020. Principales resultados por localidad (ITER), 2021.</li>
+                <li>(2) INEGI. Censo de Población y Vivienda 2020. Principales resultados por localidad (ITER), 2021.</li>
+                <li>(3) INEGI Marco Geoestadístico Municipal 2020.</li>
+            </ul>
+        </div>
+    </div>
+</div>

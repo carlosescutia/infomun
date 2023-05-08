@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+    <div class="row">
+        <div class="col-sm-6 mb-3">
+            {% include 'mapa_municipios.html' %}
+        </div>
+        <div class="col-sm-6 mb-3">
+            {% include 'datos_municipio.html' %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 mb-3">
+            {% include 'docs_municipios.html' %}
+        </div>
+    </div>
+{% endblock %}
