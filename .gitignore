@@ -1,5 +1,8 @@
 .env
 
+mediafiles/*
+staticfiles/*
+
 *~
 *.swp
 *.swo
