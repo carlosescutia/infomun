@@ -130,7 +130,7 @@ STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 # Global static files
 STATICFILES_DIRS = [
-    BASE_DIR / "static"
+    BASE_DIR / "globalstatic"
 ]
 
 # Default primary key field type

@@ -38,7 +38,9 @@ FROM python:3.10-alpine
 RUN mkdir -p /home/app
 
 # create the app user
-RUN addgroup -S app && adduser -S app -G app
+# gid and uid changed to 1000 to avoid permissions problems
+# RUN addgroup -S app && adduser -S app -G app
+RUN addgroup -S app -g 1000 && adduser -S app -G app -u 1000
 
 # create the appropriate directories
 ENV HOME=/home/app
