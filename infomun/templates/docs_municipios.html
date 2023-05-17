@@ -18,9 +18,15 @@
                             <div class="accordion-body">
                                 <ol>
                                     {% for documento in docs1 %}
-                                    <li><a href="{{ documento.url }}" target="_blank">
-                                        {{ documento.etiqueta }}
-                                    </a></li>
+                                        {% if documento.archivo %}
+                                        <li><a href="{% get_media_prefix %}{{ documento.archivo }}" target="_blank">
+                                                {{ documento.etiqueta }}
+                                            </a></li>
+                                        {% elif documento.url %}
+                                            <li><a href="{{ documento.url }}" target="_blank">
+                                                {{ documento.etiqueta }}
+                                            </a></li>
+                                        {% endif %}
                                     {% endfor %}
                                 </ol>
                             </div>
@@ -36,9 +42,15 @@
                             <div class="accordion-body">
                                 <ol>
                                     {% for documento in docs2 %}
-                                    <li><a href="{{ documento.url }}" target="_blank">
-                                        {{ documento.etiqueta }}
-                                    </a></li>
+                                        {% if documento.archivo %}
+                                        <li><a href="{% get_media_prefix %}{{ documento.archivo }}" target="_blank">
+                                                {{ documento.etiqueta }}
+                                            </a></li>
+                                        {% elif documento.url %}
+                                            <li><a href="{{ documento.url }}" target="_blank">
+                                                {{ documento.etiqueta }}
+                                            </a></li>
+                                        {% endif %}
                                     {% endfor %}
                                 </ol>
                             </div>
@@ -82,9 +94,15 @@
                             <div class="accordion-body">
                                 <ol>
                                     {% for documento in docs4 %}
-                                    <li><a href="{{ documento.url }}" target="_blank">
-                                        {{ documento.etiqueta }}
-                                    </a></li>
+                                        {% if documento.archivo %}
+                                        <li><a href="{% get_media_prefix %}{{ documento.archivo }}" target="_blank">
+                                                {{ documento.etiqueta }}
+                                            </a></li>
+                                        {% elif documento.url %}
+                                            <li><a href="{{ documento.url }}" target="_blank">
+                                                {{ documento.etiqueta }}
+                                            </a></li>
+                                        {% endif %}
                                     {% endfor %}
                                 </ol>
                             </div>
@@ -100,9 +118,15 @@
                             <div class="accordion-body">
                                 <ol>
                                     {% for documento in docs5 %}
-                                    <li><a href="{{ documento.url }}" target="_blank">
-                                        {{ documento.etiqueta }}
-                                    </a></li>
+                                        {% if documento.archivo %}
+                                        <li><a href="{% get_media_prefix %}{{ documento.archivo }}" target="_blank">
+                                                {{ documento.etiqueta }}
+                                            </a></li>
+                                        {% elif documento.url %}
+                                            <li><a href="{{ documento.url }}" target="_blank">
+                                                {{ documento.etiqueta }}
+                                            </a></li>
+                                        {% endif %}
                                     {% endfor %}
                                 </ol>
                             </div>
