@@ -13,6 +13,7 @@ def municipio_detail(request, id='015'):
     docs3 = Documento.objects.filter(seccion=3).filter(Q(municipio__id=id) | Q(municipio__cve_mun='000')).order_by('posicion').values()
     docs4 = Documento.objects.filter(seccion=4).filter(Q(municipio__id=id) | Q(municipio__cve_mun='000')).order_by('posicion').values()
     docs5 = Documento.objects.filter(seccion=5).filter(Q(municipio__id=id) | Q(municipio__cve_mun='000')).order_by('posicion').values()
+    docs6 = Documento.objects.filter(seccion=6).filter(Q(municipio__id=id) | Q(municipio__cve_mun='000')).order_by('posicion').values()
     context = {
         'municipios': municipios,
         'municipio': municipio,
@@ -20,6 +21,7 @@ def municipio_detail(request, id='015'):
         'docs2': docs2,
         'docs3': docs3,
         'docs4': docs4,
-        'docs5': docs5
+        'docs5': docs5,
+        'docs6': docs6
     }
     return render(request, 'municipio_detail.html', context)
