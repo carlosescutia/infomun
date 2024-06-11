@@ -132,30 +132,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingSix">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                VI. RESULTADOS DE LA CONSULTA CIUDADANA PED 2050
-                            </button>
-                        </h2>
-                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
-                            <div class="accordion-body">
-                                <ol>
-                                    {% for documento in docs6 %}
-                                        {% if documento.archivo %}
-                                        <li><a href="{% get_media_prefix %}{{ documento.archivo }}" target="_blank">
-                                                {{ documento.etiqueta }}
-                                            </a></li>
-                                        {% elif documento.url %}
-                                            <li><a href="{{ documento.url }}" target="_blank">
-                                                {{ documento.etiqueta }}
-                                            </a></li>
-                                        {% endif %}
-                                    {% endfor %}
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
