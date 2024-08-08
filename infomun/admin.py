@@ -4,4 +4,8 @@ from .models import Documento
 
 # Register your models here.
 admin.site.register(Municipio)
-admin.site.register(Documento)
+
+
+@admin.register(Documento)
+class DocumentoAdmin(admin.ModelAdmin):
+    list_filter = ('municipio', 'posicion')
